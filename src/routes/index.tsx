@@ -1,24 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import Navbar from "@/components/site/Navbar";
+import HeroSection from "@/components/site/HeroSection";
+import ServicesSection from "@/components/site/ServicesSection";
+import AboutSection from "@/components/site/AboutSection";
+import BrandsSection from "@/components/site/BrandsSection";
+import FilmsSection from "@/components/site/FilmsSection";
+import GallerySection from "@/components/site/GallerySection";
+import ReviewsSection from "@/components/site/ReviewsSection";
+import ContactSection from "@/components/site/ContactSection";
+import Footer from "@/components/site/Footer";
+
+const title = "Black Glass Auto Curtici — Folie Auto & Colantări Profesionale";
+const description =
+  "Folie auto omologată RAR, colantări, înlocuire folii și recondiționări faruri în Curtici, Arad. Peste 10 ani experiență. Programări: 0741 995 007.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen overflow-x-hidden bg-background">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <BrandsSection />
+        <FilmsSection />
+        <GallerySection />
+        <ReviewsSection />
+        <ContactSection />
+      </main>
+      <Footer />
     </div>
   );
 }
