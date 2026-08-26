@@ -4,6 +4,7 @@
    ============================================================ */
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Acasă", href: "#hero" },
@@ -48,7 +49,7 @@ export default function Navbar() {
           >
             <div className="w-10 h-10 lg:w-12 lg:h-12 overflow-hidden border-2 border-[#e31c1c]/60 group-hover:border-[#e31c1c] transition-colors duration-300">
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663498639300/SwbogNZPAXb3k3JD2casbJ/lojo_100ac393.jpg"
+                src={logo}
                 alt="Black Glass Auto"
                 className="w-full h-full object-contain bg-black"
                 onError={(e) => {
