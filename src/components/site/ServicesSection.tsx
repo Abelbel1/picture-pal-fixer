@@ -5,11 +5,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Shield, Layers, Wrench, CheckCircle } from "lucide-react";
 
-const TINTING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663498639300/SwbogNZPAXb3k3JD2casbJ/service_tinting-4bZk7tojpepbRgm2oCr3yL.webp";
-const WRAPPING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663498639300/SwbogNZPAXb3k3JD2casbJ/service_wrapping-HcxZCbVaPQVVKuBRXYNq2h.webp";
-const FILM_REPLACEMENT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663498639300/SwbogNZPAXb3k3JD2casbJ/service_film_replacement-8RjARUm5LpmWnktnyoSZwt.webp";
-const HEADLIGHT_POLISH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663498639300/SwbogNZPAXb3k3JD2casbJ/service_headlight_polish-23xyt6PTQq7gmQiuriCPjQ.webp";
-const HEADLIGHT_PROTECTION_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663498639300/SwbogNZPAXb3k3JD2casbJ/service_headlight_protection-HmnPxfngYWEJEDq8a6CUqi.webp";
+const TINTING_IMG = "/__l5e/assets-v1/4b55f69d-ae6c-4a56-900c-d81d5ffa27ea/folii-geamuri-28.jpeg";
+const WRAPPING_IMG = "/__l5e/assets-v1/49ae99b4-3b4e-49c0-be5b-4c1f5e8d227c/chrome-delete-70.jpeg";
+const FILM_REPLACEMENT_IMG = "/__l5e/assets-v1/ca727e3a-3771-4702-a278-8dbb94e52afd/folii-geamuri-36.jpeg";
+const HEADLIGHT_POLISH_IMG = "/__l5e/assets-v1/b5956ab8-020a-416a-b5e7-463469ef4177/reconditionari-faruri-2.jpeg";
+const HEADLIGHT_PROTECTION_IMG = "/__l5e/assets-v1/fc365efb-3251-4df8-b9b2-eb90f12a5bd2/reconditionari-faruri-7.jpeg";
 
 const services = [
   {

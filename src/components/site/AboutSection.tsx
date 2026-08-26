@@ -5,9 +5,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Award, Clock, MapPin, CheckCircle2 } from "lucide-react";
 
-const ABOUT_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663498639300/SwbogNZPAXb3k3JD2casbJ/about_bg-jn4iAWGtPUEGX4U8o5gzBu.webp";
-const FACEBOOK_BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663498639300/SwbogNZPAXb3k3JD2casbJ/noi_578146cf.jpg";
-const ABOUT_BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663498639300/SwbogNZPAXb3k3JD2casbJ/noi_578146cf.jpg";
+const ABOUT_IMAGE = "/__l5e/assets-v1/cb60e4c1-9fb4-46db-943b-3040f803f3ec/chrome-delete-67.jpeg";
+const FACEBOOK_BANNER = "/__l5e/assets-v1/c4a2aa7b-6ac5-4cd1-a5b8-1e05be0ded45/reconditionari-faruri-11.jpeg";
+const ABOUT_BANNER = "/__l5e/assets-v1/c4a2aa7b-6ac5-4cd1-a5b8-1e05be0ded45/reconditionari-faruri-11.jpeg";
 
 const stats = [
   { icon: Clock, value: "10+", label: "Ani Experiență" },
