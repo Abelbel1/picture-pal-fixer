@@ -33,7 +33,7 @@ function ReviewCard({ review, index }: { review: typeof reviews[0]; index: numbe
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           setTimeout(() => setVisible(true), index * 100);
         }
       },
@@ -91,7 +91,7 @@ export default function ReviewsSection() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      ([entry]) => { if (entry?.isIntersecting) setVisible(true); },
       { threshold: 0.1 }
     );
     if (ref.current) observer.observe(ref.current);

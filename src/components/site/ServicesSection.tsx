@@ -107,7 +107,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           setTimeout(() => setVisible(true), index * 120);
         }
       },
@@ -210,7 +210,7 @@ export default function ServicesSection() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      ([entry]) => { if (entry?.isIntersecting) setVisible(true); },
       { threshold: 0.1 }
     );
     if (ref.current) observer.observe(ref.current);
