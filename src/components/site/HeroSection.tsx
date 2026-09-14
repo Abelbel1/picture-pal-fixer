@@ -5,7 +5,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Phone, Star } from "lucide-react";
 
-const HERO_IMAGE = "/__l5e/assets-v1/66a221c7-86f2-47b9-938a-43af8ea552e0/folii-geamuri-26.jpeg";
+const HERO_IMAGE = "/gallery/folii-geamuri/1.jpeg";
 
 export default function HeroSection() {
   const [visible, setVisible] = useState(false);
