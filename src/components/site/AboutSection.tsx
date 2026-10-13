@@ -5,9 +5,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Award, Clock, MapPin, CheckCircle2 } from "lucide-react";
 
-const ABOUT_IMAGE = "/gallery/chrome-delete/1.jpeg";
-const FACEBOOK_BANNER = "/gallery/reconditionari-faruri/11.jpeg";
-const ABOUT_BANNER = "/gallery/reconditionari-faruri/11.jpeg";
+const ABOUT_BANNER = "/brand/despre-noi.jpg";
 
 const stats = [
   { icon: Clock, value: "10+", label: "Ani Experiență" },
@@ -55,7 +53,7 @@ export default function AboutSection() {
               <img
                 src={ABOUT_BANNER}
                 alt="Black Glass Auto Services"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-auto aspect-[3/2] object-contain"
               />
               {/* Diagonal overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#e31c1c]/10 to-transparent" />

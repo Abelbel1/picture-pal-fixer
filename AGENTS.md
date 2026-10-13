@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep user-selected brand images in public/brand with root-relative URLs so they remain portable to the user's external hosting.

@@ -4,7 +4,7 @@
    ============================================================ */
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/logo.png";
+const logo = "/brand/official-logo.jpg";
 
 const navLinks = [
   { label: "Acasă", href: "#hero" },
