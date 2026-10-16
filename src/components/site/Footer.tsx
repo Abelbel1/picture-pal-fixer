@@ -56,7 +56,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href === "/materiale" ? "/materiale" : "/"}
-                    hash={link.href.startsWith("#") ? link.href.slice(1) : undefined}
+                    hash={link.href.startsWith("#") ? link.href.slice(1) : ""}
                     className="font-body text-sm text-white/50 hover:text-[#e31c1c] transition-colors duration-200"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
