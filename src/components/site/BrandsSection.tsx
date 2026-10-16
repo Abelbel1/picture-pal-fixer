@@ -7,22 +7,27 @@ import { useEffect, useRef, useState } from "react";
 const BRANDS = [
   {
     name: "AVERY DENNISON PPF",
+    logo: "/brand/avery-dennison.png",
     description: "Paint Protection Film Premium",
   },
   {
     name: "GLOBAL",
+    logo: "/brand/global.png",
     description: "Window Films Professional",
   },
   {
     name: "REGEN",
+    logo: "/brand/regen.png",
     description: "Instant Self-Healing PPF",
   },
   {
     name: "MOTIVA PPF",
+    logo: "/brand/motiva.png",
     description: "Premium Protection Films",
   },
   {
     name: "KPMF",
+    logo: "/brand/kpmf.png",
     description: "Professional Vinyl Wraps",
   },
 ];
@@ -96,14 +101,14 @@ export default function BrandsSection() {
             >
               {/* Card Background */}
               <div className="relative p-6 bg-gradient-to-br from-gray-900 to-black border border-white/10 group-hover:border-[#e31c1c]/50 transition-all duration-500 h-full flex flex-col items-center justify-center text-center">
-                {/* Logo Placeholder */}
-                <div className="w-full h-24 mb-4 bg-white/5 rounded flex items-center justify-center overflow-hidden group-hover:bg-white/10 transition-colors duration-300">
-                  <span
-                    className="font-display text-2xl font-bold tracking-[0.15em] text-white/85 text-center px-2"
-                    style={{ fontFamily: "'Rajdhani', sans-serif" }}
-                  >
-                    {brand.name.split(" ")[0]}
-                  </span>
+                {/* Official brand logo */}
+                <div className="w-full h-24 mb-4 bg-primary-foreground rounded flex items-center justify-center overflow-hidden p-3">
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
                 </div>
 
                 {/* Brand Name */}
