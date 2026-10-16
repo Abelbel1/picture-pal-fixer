@@ -1,0 +1,3 @@
+- [ ] Shorten mobile service cards and connect each to its gallery page.
+- [ ] Move brands and film ranges to Materiale folosite and update navigation.
+- [ ] Verify mobile/desktop navigation, galleries, images, and retained sections.
