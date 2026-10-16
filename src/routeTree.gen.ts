@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MaterialeRouteImport } from './routes/materiale'
+import { Route as ServiciiServiceIdRouteImport } from './routes/servicii.$serviceId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MaterialeRoute = MaterialeRouteImport.update({
+  id: '/materiale',
+  path: '/materiale',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiciiServiceIdRoute = ServiciiServiceIdRouteImport.update({
+  id: '/servicii/$serviceId',
+  path: '/servicii/$serviceId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/materiale': typeof MaterialeRoute
+  '/servicii/$serviceId': typeof ServiciiServiceIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/materiale': typeof MaterialeRoute
+  '/servicii/$serviceId': typeof ServiciiServiceIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/materiale': typeof MaterialeRoute
+  '/servicii/$serviceId': typeof ServiciiServiceIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/materiale' | '/servicii/$serviceId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/materiale' | '/servicii/$serviceId'
+  id: '__root__' | '/' | '/materiale' | '/servicii/$serviceId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  MaterialeRoute: typeof MaterialeRoute
+  ServiciiServiceIdRoute: typeof ServiciiServiceIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/materiale': {
+      id: '/materiale'
+      path: '/materiale'
+      fullPath: '/materiale'
+      preLoaderRoute: typeof MaterialeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicii/$serviceId': {
+      id: '/servicii/$serviceId'
+      path: '/servicii/$serviceId'
+      fullPath: '/servicii/$serviceId'
+      preLoaderRoute: typeof ServiciiServiceIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  MaterialeRoute: MaterialeRoute,
+  ServiciiServiceIdRoute: ServiciiServiceIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

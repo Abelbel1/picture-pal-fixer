@@ -2,12 +2,10 @@
    FOOTER — Black Glass Auto Industrial Noir
    Dark footer with brand info, quick links, contact
    ============================================================ */
+import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, Facebook } from "lucide-react";
 
 export default function Footer() {
-  const scrollTo = (href: string) => {
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <footer className="bg-[#080808] border-t border-white/5">
@@ -52,17 +50,18 @@ export default function Footer() {
                 { label: "Acasă", href: "#hero" },
                 { label: "Servicii", href: "#servicii" },
                 { label: "Despre Noi", href: "#despre" },
-                { label: "Galerie", href: "#galerie" },
+                { label: "Materiale folosite", href: "/materiale" },
                 { label: "Contact", href: "#contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => scrollTo(link.href)}
+                  <Link
+                    to={link.href === "/materiale" ? "/materiale" : "/"}
+                    hash={link.href.startsWith("#") ? link.href.slice(1) : ""}
                     className="font-body text-sm text-white/50 hover:text-[#e31c1c] transition-colors duration-200"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

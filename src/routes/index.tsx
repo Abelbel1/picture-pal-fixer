@@ -4,9 +4,6 @@ import Navbar from "@/components/site/Navbar";
 import HeroSection from "@/components/site/HeroSection";
 import ServicesSection from "@/components/site/ServicesSection";
 import AboutSection from "@/components/site/AboutSection";
-import BrandsSection from "@/components/site/BrandsSection";
-import FilmsSection from "@/components/site/FilmsSection";
-import GallerySection from "@/components/site/GallerySection";
 import ReviewsSection from "@/components/site/ReviewsSection";
 import ContactSection from "@/components/site/ContactSection";
 import Footer from "@/components/site/Footer";
@@ -37,9 +34,6 @@ function Index() {
         <HeroSection />
         <ServicesSection />
         <AboutSection />
-        <BrandsSection />
-        <FilmsSection />
-        <GallerySection />
         <ReviewsSection />
         <ContactSection />
       </main>
