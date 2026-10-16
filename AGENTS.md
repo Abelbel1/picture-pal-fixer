@@ -10,3 +10,6 @@
 <!-- LOVABLE:END -->
 
 - Keep user-selected brand images in public/brand with root-relative URLs so they remain portable to the user's external hosting.
+
+- Define service metadata and gallery mappings in src/data/services.ts; both homepage cards and service detail routes consume it to keep destinations and photos consistent.
+- Use /servicii/$serviceId for service galleries and /materiale for existing brands and films; keep homepage-only sections on / and use router links with hashes for returning to them.

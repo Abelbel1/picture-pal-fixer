@@ -259,3 +259,20 @@
 .animate-fade-in-right {
   animation: fadeInRight 0.7s ease forwards;
 }
+
+/* Service gallery invitation: visible while a touch-screen card is in view. */
+@media (hover: none) {
+  .service-card.is-in-view .service-gallery-overlay { opacity: 1; }
+}
+#servicii, #despre, #contact { scroll-margin-top: 5rem; }
+.materials-page > section { clip-path: none !important; margin: 0 !important; padding: 3rem 0 !important; }
+.materials-page > section h2 { font-size: 2.5rem; }
+@media (max-width: 767px) {
+  .materials-page #colantari .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+  .materials-page #colantari .grid > div:last-child { grid-column: 1 / -1; }
+  .materials-page > section .mb-16 { margin-bottom: 1.5rem; }
+  .materials-page > section .mt-16 { margin-top: 1.5rem; padding: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
