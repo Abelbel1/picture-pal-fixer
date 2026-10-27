@@ -1,4 +1,4 @@
-- [ ] Shorten mobile service cards and connect each to its gallery page.
-- [ ] Move brands and film ranges to Materiale folosite and update navigation.
-- [ ] Verify mobile/desktop navigation, galleries, images, and retained sections.
-- [ ] Replace sample reviews with original Google reviews transcribed from uploaded screenshots.
+- [x] Shorten mobile service cards and connect each to its gallery page.
+- [x] Move brands and film ranges to Materiale folosite and update navigation.
+- [x] Verify mobile/desktop navigation, galleries, images, and retained sections.
+- [x] Replace sample reviews with original Google reviews transcribed from uploaded screenshots.
