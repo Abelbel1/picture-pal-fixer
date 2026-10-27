@@ -8,20 +8,20 @@ import { Star } from "lucide-react";
 const reviews = [
   {
     id: 1,
-    name: "Taran Andrei",
-    text: "Seriozitate și profesionalism! Recomand!",
+    name: "Marian Sandea",
+    text: "Servicii de nota 10! Foarte serioși și punctuali, iar foliile au fost aplicate impecabil. Totul s-a desfășurat conform programării, cu profesionalism și atenție la detalii. Recomand cu încredere!",
     rating: 5,
   },
   {
     id: 2,
-    name: "Calin Albici",
-    text: "Serviciu de calitate superioară. Foarte mulțumit de rezultat!",
+    name: "Roxana Maria Zimbran",
+    text: "Super profi. Se vede calitatea și atenția la detalii. Foarte mulțumită de comunicare, îndrumări, răspunsurile primite referitor la normele legale și bineînțeles super mulțumită de rezultatul final. Recomand cu toată încrederea și sigur revenim ori de câte ori este nevoie.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Andrei Popovici",
-    text: "Echipă profesională și atentă la detalii. Recomand cu plăcere!",
+    name: "Ramona Petrisor",
+    text: "Servicii profesionale, lucrare executată impecabil și personal amabil. Foliile arată excelent, iar rezultatul a fost peste așteptări. Recomand cu încredere!",
     rating: 5,
   },
 ];
@@ -46,39 +46,39 @@ function ReviewCard({ review, index }: { review: typeof reviews[0]; index: numbe
   return (
     <div
       ref={ref}
-      className={`bg-[#131313] border border-white/8 hover:border-[#e31c1c]/40 p-6 transition-all duration-500 ${
+      className={`bg-card border border-border hover:border-primary/40 rounded-md p-6 transition-all duration-500 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
       style={{ transitionDelay: `${index * 0.1}s` }}
     >
       {/* Stars */}
-      <div className="flex gap-1 mb-4">
+      <div className="flex gap-1 mb-4" aria-label={`${review.rating} din 5 stele`}>
         {Array.from({ length: review.rating }).map((_, i) => (
-          <Star key={i} size={16} className="fill-[#e31c1c] text-[#e31c1c]" />
+          <Star key={i} size={16} aria-hidden="true" className="fill-primary text-primary" />
         ))}
       </div>
 
       {/* Review text */}
       <p
-        className="font-body text-white/70 leading-relaxed mb-4 italic"
+        className="font-body text-foreground/75 leading-relaxed mb-4"
         style={{ fontFamily: "'DM Sans', sans-serif" }}
       >
         "{review.text}"
       </p>
 
       {/* Author */}
-      <div className="pt-4 border-t border-white/10">
+      <div className="pt-4 border-t border-border">
         <span
-          className="font-display text-sm font-semibold text-white"
+          className="font-display text-base font-semibold text-foreground"
           style={{ fontFamily: "'Rajdhani', sans-serif" }}
         >
           {review.name}
         </span>
         <span
-          className="font-label text-xs text-[#e31c1c] block"
+          className="font-label text-xs text-muted-foreground block mt-1"
           style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
         >
-          CLIENT VERIFICAT
+          RECENZIE GOOGLE
         </span>
       </div>
     </div>
